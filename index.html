@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="http://neoteric-calculator.surge.sh">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Calculator App">
+    <meta property="og:description" content="A modern and stylish calculator app">
+    <meta property="og:image" content="http://neoteric-calculator.surge.sh/images/screenshot.png">
+
+    <title>Calculator App</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!-- link stylesheet -->
+    <link rel="stylesheet" href="dist/style.css" />
+
+    <!-- javaScript file -->
+    <script defer type="module" src="./js/main.js"></script>
+  </head>
+  <body class="bg-slate-950">
+    <header class="bg-slate-900 text-slate-500">
+      <nav class="max-w-lg mx-auto text-sm p-1 px-3">
+        <ul class="font-semibold flex justify-between">
+          <li>
+            Code by
+            <a class="text-green-400 hover:text-slate-600" href="https://github.com/junayed-code">@junayed</a>
+          </li>
+          <li>
+            My
+            <a class="text-green-400 hover:text-slate-600" href="https://www.facebook.com/junayedakbour">facebook</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container w-11/12 mx-auto text-slate-50">
+      <div
+        class="max-w-xs mx-auto mt-[12vh] p-3 rounded-lg border-2 border-gray-700"
+      >
+        <!-- Calculator display -->
+        <div
+          class="flex flex-col gap-2 rounded-md text-4xl font-bold p-3 bg-gray-900"
+        >
+          <input
+            id="equation"
+            class="text-lg text-slate-400 bg-transparent outline-none text-right"
+            type="text"
+            readonly
+          />
+          <input
+            id="calculate-value"
+            class="bg-transparent outline-none text-right"
+            type="text"
+            value="0"
+            readonly
+          />
+        </div>
+
+        <!-- Calculator all buttons -->
+        <div
+          class="grid grid-cols-4 gap-3 mt-5 text-2xl font-semibold container-button"
+        >
+          <button
+            id="clear"
+            class="p-2 rounded-md bg-gray-700 active:opacity-60"
+          >
+            C
+          </button>
+          <button
+            class="p-2 rounded-md bg-gray-700 active:opacity-60"
+            id="percent"
+          >
+            %
+          </button>
+          <button
+            id="delete"
+            class="p-2 rounded-md bg-gray-700 active:opacity-60 flex justify-center items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0  0 576 512"
+              stroke="currentColor"
+            >
+              <path
+                fill="none"
+                stroke-width="35"
+                d="M576 128c0-35.3-28.7-64-64-64H205.3c-17 0-33.3 6.7-45.3 18.7L9.4 233.4c-6 6-9.4 14.1-9.4 22.6s3.4 16.6 9.4 22.6L160 429.3c12 12 28.3 18.7 45.3 18.7H512c35.3 0 64-28.7 64-64V128zM271 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+              />
+            </svg>
+          </button>
+          <button
+            class="p-2 rounded-md bg-gray-700 active:opacity-60"
+            data-operator="÷"
+          >
+            &divide;
+          </button>
+
+          <button
+            class="p-2 rounded-md bg-slate-800 active:opacity-60"
+            data-number="7"
+          >
+            7
+          </button>
+          <button
+            class="p-2 rounded-md bg-slate-800 active:opacity-60"
+            data-number="8"
+          >
+            8
+          </button>
+          <button
+            class="p-2 rounded-md bg-slate-800 active:opacity-60"
+            data-number="9"
+          >
+            9
+          </button>
+          <button
+            class="p-2 rounded-md bg-gray-700 active:opacity-60"
+            data-operator="×"
+          >
+            &times;
+          </button>
+
+          <button
+            class="p-2 rounded-md bg-slate-800 active:opacity-60"
+            data-number="4"
+          >
+            4
+          </button>
+          <button
+            class="p-2 rounded-md bg-slate-800 active:opacity-60"
+            data-number="5"
+          >
+            5
+          </button>
+          <button
+            class="p-2 rounded-md bg-slate-800 active:opacity-60"
+            data-number="6"
+          >
+            6
+          </button>
+          <button
+            class="p-2 rounded-md bg-gray-700 active:opacity-60"
+            data-operator="-"
+          >
+            &minus;
+          </button>
+
+          <button
+            class="p-2 rounded-md bg-slate-800 active:opacity-60"
+            data-number="1"
+          >
+            1
+          </button>
+          <button
+            class="p-2 rounded-md bg-slate-800 active:opacity-60"
+            data-number="2"
+          >
+            2
+          </button>
+          <button
+            class="p-2 rounded-md bg-slate-800 active:opacity-60"
+            data-number="3"
+          >
+            3
+          </button>
+          <button
+            class="p-2 rounded-md bg-gray-700 active:opacity-60"
+            data-operator="+"
+          >
+            &plus;
+          </button>
+
+          <button
+            class="p-2 rounded-md bg-slate-800 active:opacity-60"
+            data-number="00"
+          >
+            00
+          </button>
+          <button
+            class="p-2 rounded-md bg-slate-800 active:opacity-60"
+            data-number="0"
+          >
+            0
+          </button>
+          <button
+            class="p-2 rounded-md bg-slate-800 active:opacity-60"
+            data-number="."
+          >
+            .
+          </button>
+          <button
+            id="equal"
+            class="p-2 rounded-md bg-orange-500 active:opacity-60"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
